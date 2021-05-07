@@ -53,17 +53,18 @@
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
 .sectiontitle .heading{margin:0; padding:0; line-height:1;}
 
-#aboutMe .sectiontitle{display:block; max-width:55%; margin:0 auto; text-align:center;}
+#front_aboutMe .sectiontitle{display:block; max-width:55%; margin:0 auto; text-align:center;}
 
-#aboutMe{}
-#aboutMe ul{text-align:center;}
-#aboutMe ul li{}
-#aboutMe ul li article{}
-#aboutMe ul li article i{margin-bottom:30px; font-size:42px}
-#aboutMe ul li article .heading{}
-#aboutMe ul li article p{}
-#aboutMe ul li article footer{margin-top:30px;}
-#aboutMe .mWidth{ width: 75%;}
+#front_aboutMe{}
+#front_aboutMe ul{text-align:center;}
+#front_aboutMe ul li{}
+#front_aboutMe ul li article{}
+#front_aboutMe ul li article i{margin-bottom:30px; font-size:42px}
+#front_aboutMe ul li article .heading{}
+#front_aboutMe ul li article p{}
+#front_aboutMe ul li article footer{margin-top:30px;}
+#front_aboutMe .mWidth{ width: 75%;}
+
 
 /* Skillset */
 
