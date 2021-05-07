@@ -12,7 +12,7 @@
 *.out
 
 # Ignore test folder
-C:\Users\Home\Desktop\WebCV\First TEST
+C:\Users\Home\Desktop\WebCV\First TEST\*
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
