@@ -512,7 +512,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
 /* Header */
 #header{border-color:rgba(255,255,255,.2);}
 #header #logo h1 a{color:white;}
-
+#aboutMe #header #logo h1 a{color:black;}
 
 /* Page Intro */
 #pageintro{color:#FFFFFF;}
@@ -553,6 +553,10 @@ input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(130,157,162,.5);/* #829DA2 */ border-color:rgba(0,0,0,.6);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#DBE5E7; background-color:#829DA2;}
 #mainav form select{color:#474747; background-color:#FFFFFF;}
+
+#aboutMe #mainav li a{color:black;}
+#aboutMe #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:orangered !important; background-color:inherit;}
+
 
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
 .container .sidebar nav a:hover{color:#829DA2;}

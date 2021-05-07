@@ -14,6 +14,7 @@ func init() {
 
 func main() {
 	http.HandleFunc("/", frontPage)
+	http.HandleFunc("/aboutMe", aboutMe)
 	http.HandleFunc("/skillSet", skillSet)
 	http.HandleFunc("/workExperience", workExperience)
 	http.HandleFunc("/contactMe", contactMe)
@@ -30,12 +31,9 @@ func frontPage(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-// var nv = template.FuncMap{
-// 	"nv": navBar,
-// }
 
-func navBar(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "navBar.gohtml", req)
+func aboutMe(w http.ResponseWriter, req *http.Request) {
+	err := tpl.ExecuteTemplate(w, "aboutMe.gohtml", req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
