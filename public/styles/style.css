@@ -1,0 +1,676 @@
+@charset "utf-8";
+
+@import url("framework.css");
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+
+.row1{padding:80px 0 0 0;}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:0 15px; border:solid; border-width:1px 0;}
+
+#header #logo{margin:28px 0 0 0; display: flex; align-items: center; justify-content: center;}
+#header #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:180px 0;}
+
+#pageintro article{display:block; max-width:80%; margin:0 auto; text-align:center;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem;}
+#pageintro footer{margin-top:50px;}
+#pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
+#pageintro footer input, #pageintro footer button{display:block; height:44px; border:none;}
+#pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
+#pageintro footer button{position:absolute; top:1px; right:1px; width:42px; height:42px; font-size:16px; cursor:pointer;}
+ footer button em{display:none;}
+
+ .top_background{ height: 940px;	
+	background:rgb(85, 85, 85);
+	background: url(../images/background2.jpg);
+	background-size: cover;
+}
+
+
+
+/* About Me Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+.second_background
+	{ 
+		height: 930px;
+	}
+
+
+/* About Me */
+.container .content{}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle .heading{margin:0; padding:0; line-height:1;}
+
+#aboutMe .sectiontitle{display:block; max-width:55%; margin:0 auto; text-align:center;}
+
+#aboutMe{}
+#aboutMe ul{text-align:center;}
+#aboutMe ul li{}
+#aboutMe ul li article{}
+#aboutMe ul li article i{margin-bottom:30px; font-size:42px}
+#aboutMe ul li article .heading{}
+#aboutMe ul li article p{}
+#aboutMe ul li article footer{margin-top:30px;}
+#aboutMe .mWidth{ width: 75%;}
+
+/* Skillset */
+
+.skillsetBackgound{
+	background:rgb(85, 85, 85);
+	background: url(../images/background4.jpg);
+	background-size: cover;
+}
+
+.s_container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	flex-wrap: wrap;
+}
+@media screen and (min-width:750px){
+	.sm_container{
+		position: relative;
+		width: 77%!important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 40px 0;
+		flex-wrap: wrap;
+	}
+}
+.sm_container{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	flex-wrap: wrap;
+}
+#small .s_container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	flex-wrap: wrap;
+}
+
+#small  .s_container .box{
+	position: relative;
+	width: 170px;
+	height: 230px;
+	color: white;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 30px;
+	transition: 0.5s;
+}
+
+#small .s_container .box .content h2{
+	font-size: 1.3em;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#small .s_container .box .content p{
+	font-size: 0.9em;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.s_container .box{
+	position: relative;
+	width: 320px;
+	height: 400px;
+	color: white;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 30px;
+	transition: 0.5s;
+}
+
+.s_container .box:hover{
+	transform: translateY(-20px);
+
+}
+.s_container .box::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #ff5100, #ffd900)
+}
+
+.s_container .box::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #ff0000, #ff5e01);
+	filter: blur(30px);
+}
+.s_container .box:nth-child(2)::before,
+.s_container .box:nth-child(2)::after{
+	background: linear-gradient(315deg, #6d1eff, #ec6a00);
+}
+.s_container .box:nth-child(3)::before,
+.s_container .box:nth-child(3)::after{
+	background: linear-gradient(315deg, #ff7d04, #6f00ff);
+}
+.s_container .box:nth-child(4)::before,
+.s_container .box:nth-child(4)::after{
+	background: linear-gradient(315deg, #92ff04, #ff5100);
+}
+.s_container .box:nth-child(5)::before,
+.s_container .box:nth-child(5)::after{
+	background: linear-gradient(315deg, #01b7ff, #92ff04);
+}
+.s_container .box:nth-child(6)::before,
+.s_container .box:nth-child(6)::after{
+	background: linear-gradient(315deg, #00ff55, #01b7ff);
+}
+
+.s_container .box span{
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	right: 6px;
+	bottom:6px;
+	background: rgba(0,0,0,.6);
+	z-index: 2;
+}
+.s_container .box span::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,.1);
+	pointer-events: none;
+}
+.s_container .box .content{
+	position: absolute;
+	z-index: 10;
+	padding: 20px 40px;
+}
+.s_container .box .content h2{
+	font-size: 2em;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.s_container .box .content p{
+	font-size: 1.1em;
+	color: white;
+	margin-bottom: 10px;
+}
+
+/* Work Experience */
+.workExperience{
+	background:rgb(85, 85, 85);
+	background: url(../images/background4.jpg);
+	background-size: cover;
+}
+
+
+
+/* Contact me desig */
+@media screen and (min-width:1140px){
+	.contactMe .container{
+		width: 40%;
+	}
+	}
+	.contact_lb{
+		color: white;
+		font-weight: bold;
+	}
+	
+	.contact_form_group {
+		margin-bottom: 1rem;
+	}
+	
+	.contact_form_control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + 0.75rem + 2px);
+		padding: 0.375rem 0.75rem;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		outline: none;
+		border-radius: 0.25rem;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+	
+	textarea.contact_form_control {
+		font-family: -apple-system, Arial, sans-serif;
+		height: auto;
+	}
+	
+	.contact_btn {
+		display: inline-block;
+		font-weight: 400;
+		color: #212529;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-color: transparent;
+		border: 1px solid transparent;
+		padding: 0.375rem 0.75rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		border-radius: 0.25rem;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+	
+	.contact_btn:hover {
+		color: #212529;
+		text-decoration: none;
+	}
+	
+	.contact_btn:focus, .contact_btn.focus {
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgb(255, 255, 255);
+	}
+	
+	.contact_btn_primary {
+		color: #000;
+		background-color: #DBE5E7;
+		border-color: #DBE5E7;
+	}
+	
+	
+	.contact_btn_primary:hover {
+		color: inherit;
+		background-color:transparent;
+		border-color: inherit;
+	}
+	
+	#contactForm_button .contact_btn_primary:hover {
+		color: white;
+		background-color:transparent;
+		border-color: inherit;
+	}
+	
+	
+	.contact_btn_primary:focus, .contact_btn_primary.focus {
+		color: #fff;
+		background-color: white;
+		border-color: white;
+		box-shadow: 0 0 0 0.2rem rgb(255, 255, 255);
+	}
+	
+	
+	.contact_btn_lg, .contact_btn_group-lg>.contact_btn {
+		padding: 0.5rem 1rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		border-radius: 0.3rem;
+	}
+	
+	.contact_btn_block {
+		display: block;
+		width: 100%;
+	}
+	
+	
+	.contact_btn_block+.contact_btn_block {
+		margin-top: 0.5rem;
+	}
+	
+	input[type="submit"].contact_btn_block, input[type="reset"].contact_btn_block, input[type="button"].contact_btn_block {
+		width: 100%;
+	}
+	
+	
+	.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 50px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+	  }
+	
+	  .fa-linkedin {
+		background: #007bb5;
+		color: white;
+	  }
+	  
+	  .contactMe{
+		  height: 100vh;
+		  background:rgb(85, 85, 85);
+		  background: url(../images/background6.jpg);
+		  background-size: cover;
+	  }
+	
+
+
+/* References
+--------------------------------------------------------------------------------------------------------------- */
+#references{}
+
+#references .ref-sort{display:block; margin-bottom:50px; text-align:center;}
+#references .ref-sort ul{margin:0; padding:0; list-style:none; text-transform:uppercase;}
+#references .ref-sort li{display:inline-block; position:relative; margin:0 10px 0 0; padding:0 20px 0 0;}
+#references .ref-sort li::after{position:absolute; top:0; right:0; content:"/";}
+#references .ref-sort li:last-child{margin:0; padding:0;}
+#references .ref-sort li:last-child::after{display:none;}
+#references .ref-sort li a{}
+
+#references .ref-img{margin-bottom:80px;}
+#references .ref-img li{margin-bottom:30px;}
+#references .ref-img li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#references .ref-img li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0;}
+
+#footer .heading{margin-bottom:50px; font-size:1.2rem;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:400; cursor:poiFnter;}
+
+#footer .latestimg{}
+#footer .latestimg > li{display:inline-block; float:left; width:30%; margin:0 0 5% 5%;}
+#footer .latestimg > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#footer .latestimg > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+#footer .latestimg > li img{width:100%;}/* Force the image to resize to take the full space - may have to be changed for tablets, depends on personal preference */
+#footer .latestimg > li a.imgover{display:block;}
+
+#footer #ctdetails{padding-top:80px; border-top:1px solid;}
+#footer #ctdetails ul{}
+#footer #ctdetails ul li{}
+#footer #ctdetails ul li div{position:relative; min-height:30px; padding:0 0 0 35px; line-height:1;}
+#footer #ctdetails ul li div i{position:absolute; top:0; left:0; width:25px; height:23px; font-size:20px; text-align:center;}
+#footer #ctdetails ul li div span{display:block;}
+#footer #ctdetails ul li div strong{display:block; margin:0 0 8px 0; text-transform:capitalize;}
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:none;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+a{color:#829DA2;}
+a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#D7D7D7;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.7);}
+
+.btn, .btn.inverse:hover{color:#474747; background-color:#DBE5E7; border-color:#829DA2;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+.imgover:hover::before{background:rgba(130,157,162,.5);/* #829DA2 */}
+.imgover, .imgover:hover::after{color:#FFFFFF;}
+
+
+/* Rows */
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2{color:#474747; background-color:#F4F4F4;}
+/* .row3{color:#474747; background-color:#FFFFFF;} */
+.row4{color:#C1C2C4; background-color:#323639;}
+.row5, .row5 a{color:#C1C2C4; background-color:#2A2D34;}
+
+
+/* Header */
+#header{border-color:rgba(255,255,255,.2);}
+#header #logo h1 a{color:white;}
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+#pageintro footer input{color:#FFFFFF; background-color:rgba(255,255,255,.5);}
+#pageintro footer button{color:#474747; background-color:#DBE5E7;}
+
+
+/* References */
+#references .ref-sort li a{color:inherit;}
+#references .ref-sort li a:hover, #references .ref-sort li.current a{color:#829DA2;}
+
+
+/* Latest */
+/* #latest article .excerpt time{border-color:#D7D7D7;} */
+
+
+/* Footer */
+#footer .heading{color:#FFFFFF;}
+#footer hr, #footer .borderedbox, #footer .linklist li, #footer #ctdetails{border-color:rgba(255,255,255,.1);}
+
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#829DA2;}
+#footer input:focus{border-color:#DBE5E7;}
+#footer button{color:#474747; background-color:#DBE5E7;}
+#footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
+
+.zoom {
+	transition: transform .6s; /* Animation */
+  }
+  .zoom:hover {
+	transform: scale(1.2);
+  }
+/* Navigation */
+#mainav{}
+#mainav li a{color:white;}
+#logo a:hover { text-decoration: none; }
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:orangered; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(130,157,162,.5);/* #829DA2 */ border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#DBE5E7; background-color:#829DA2;}
+#mainav form select{color:#474747; background-color:#FFFFFF;}
+
+.container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a:hover{color:#829DA2;}
+
+.pagination a, .pagination strong{border-color:#D7D7D7;}
+.pagination .current *{color:#FFFFFF; background-color:#829DA2;}
+
+#backtotop{color:#FFFFFF; background-color:#829DA2;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+@media screen and (min-width:978px) and (max-width:1140px){
+	.hoc{max-width:95%;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:978px){
+	.hoc{max-width:90%;}
+
+	#header{padding:30px 15px;}
+	#header #logo{margin-top:4%;}
+
+	/* #mainav{}
+	#mainav ul{display:none;}
+	#mainav form{display:block;} */
+
+	#breadcrumb{}
+
+	.container{}
+	#comments input[type="reset"]{margin-top:10px;}
+	.pagination li{display:inline-block; margin:0 5px 5px 0;}
+
+	#footer{}
+
+	#copyright{}
+	#copyright p:first-of-type{margin-bottom:10px;}
+}
+
+@media screen and (max-width:750px){
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter
+	{
+		display:block; 
+		float:none; 
+		width:auto;
+		margin:0 0 30px 0; 
+		padding:0;
+	}
+
+	.second_background .one_quarter{
+		max-width: 35%;
+		
+	}
+
+	#header{padding:30px 0; text-align:center;}
+	#header #logo{margin:0 0 20px 0;}
+
+	#pageintro article, #pageintro p{max-width:none; margin:auto;}
+	#pageintro .heading{font-size:2rem;}
+
+	.sectiontitle{max-width:none; margin-bottom:50px;}
+
+	.sectiontitle, #aboutMe ul, #references .ref-sort{text-align:left;}
+
+	#references .ref-img{margin-bottom:20px;}
+	#references .ref-img li:nth-last-child(-n+3){margin-bottom:30px;}
+	#references .ref-img + footer{text-align:left;}
+
+	#latest article{max-width:348px;}
+
+	.cta > :first-child{margin-top:0; text-align:center;}
+	.cta footer a{display:inline-block;}
+
+	#footer{padding-bottom:50px;}/* Not required, just looks a little better */
+	#footer .latestimg > li{display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
+	#footer .latestimg > li img{width:auto;}
+}
+
+@media screen and (max-width:450px){
+	#pageintro footer form{max-width:none; width:100%;}
+
+	#testimonials article{padding-left:0;}
+	#testimonials article:first-of-type{margin-bottom:50px;}
+	#testimonials article img{position:relative; top:inherit; left:inherit; margin-bottom:20px;}
+}
+
+
+/* Other
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.4rem;}
+	.font-x3{font-size:1.6rem;}
+}

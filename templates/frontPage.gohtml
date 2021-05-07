@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercules Tchkoidze</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link href="/node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Social Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--################################# Top Background #################################-->
+    <div class="top_background">
+        <div class="row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="flex_left zoom">
+                    <h1><a href="index.html">Hercules Tchkoidze</a></h1>
+                </div>
+                {{template "navBar"}}
+            </header>
+        </div>
+        <div id="pageintro">
+            <article>
+                <h3 class="heading ">
+                    <color style="color: orangered;">Web</color> Engineer
+                </h3>
+                <p>Hello, I am a web developer with a Bachelor of Science in Internet Engineering and Web Management.
+                </p>
+                <p>On this website you can see my skill, experience and contact information, or even contact me directly
+                    from the website.</p>
+
+                <button id="contact_btn" class="hoc contact_btn contact_btn_primary contact_btn_lg" ><a href="aboutMe">About Me</a></button>
+            </article>
+        </div>
+    </div>
+    <!--################################# / Top Background #################################-->
+    <!--################################# About Me #################################-->
+    <div id="aboutMe" class="second_background">
+        <main class="container">
+            <section>
+                <div class="sectiontitle">
+                    <h6 class="heading">About Me</h6>
+                    <!-- <p>Here you'll see general infor about me</p> -->
+                </div>
+                <div class="container mWidth flex_left">
+                    <h6 class="heading">Who am i</h6>
+                    <p>The name's Hercules Tchkoidze, i am an imperfect human being who's striving for perfection.
+                        i am a web developer and i graduated University of Greenwich in 2019 with a degree of
+                        <color style="color:yellowgreen;">Bachelor of Science</color> with first class honours.
+                        At that point i started looking for my <a href="workExperience" target="_blank" style="color:orangered;">first
+                            job</a> at which i kept honing my skills and developing
+                        new ones.
+                    </p>
+                </div>
+                <div class="mWidth flex_right">
+                    <h6 class="heading">My Passion/Hobbies</h6>
+                    <p>Most of my free time consists of different activities, working out being one of the most
+                        important for me.
+                        Being active on our line of work is important as for me as we pass most of out time sitting
+                        infront of a screen.
+                        Furthermore i enjoy reading a good <a href="https://en.wikipedia.org/wiki/Manga" target="_blank"
+                            style="color:orangered">Manga</a>
+                        or simply listening to music.
+                    </p>
+                </div>
+                <div class="container mWidth flex_left">
+                    <h6 class="heading">what do i do now</h6>
+                    <p>In general my experience is in PHP and Drupal_8, furthermore i am constantly developing my skills
+                        getting new courses. I have already finished a course in <a data-lightbox="codecademy"
+                            href="assets/images/codecademy.png" style="color:orangered;">GoLang</a> from
+                        codecademy and i am studying two more courses for GoLang through Udemy.
+                        I am also studying to get a professional certificate in
+                        <a href="https://www.coursera.org/professional-certificates/google-project-management?"
+                            target="_blank" style="color:orangered">Google Project Management</a>.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!--################################# / About Me #################################-->
+    <!--################################# Personal Skills #################################-->
+    <div id="skills" class="row2">
+        <section id="references" class="container">
+            <div class="sectiontitle">
+                <h6 class="heading">Skillset</h6>
+                <p>Most relevant skills will be shown bellow.</p>
+            </div>
+            <nav class="ref-sort">
+                <ul>
+                    <li>Go</li>
+                    <li>PHP</li>
+                    <li>Drupal 8</li>
+                    <li>MySQL</li>
+                </ul>
+            </nav>
+            <footer class="block center"><a class="btn" href="skillSet">View More Details</a></footer>
+        </section>
+    </div>
+    <!--################################# / Personal Skills #################################-->
+    {{template "footer"}}
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.backtotop.js"></script>
+    <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
+</body>
+
+</html>

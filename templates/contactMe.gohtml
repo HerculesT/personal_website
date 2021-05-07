@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hercules Tchkoidze</title>
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Social Icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="contactMe">
+    <div class="row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="flex_left zoom">
+          <h1><a href="index.html">Hercules Tchkoidze</a></h1>
+        </div>
+        {{template "navBar"}}
+      </header>
+      
+ <div class="container">
+        <form id="contactForm" class="" method="post">
+
+            <div class="contact_form_group">
+                <label for="Name" class="contact_lb">Your name</label>
+                <div class="">
+                    <input type="text" id="Name" name="Name" class="contact_form_control" required>
+                </div>
+            </div>
+
+            <div class="contact_form_group">
+                <label for="Email" class="contact_lb">Your email address</label>
+                <div class="">
+                    <input type="email" id="Email" name="Email" class="contact_form_control" required>
+                </div>
+            </div>
+
+            <div class="contact_form_group">
+                <label for="Message" class="contact_lb">Your message</label>
+                <div class="">
+                    <textarea id="Message" name="Message" class="contact_form_control" rows="6"
+                        maxlength="3000" required></textarea>
+                </div>
+            </div>
+
+            <div class="contact_form_group" id="contactForm_button">
+                <button type="submit" id="contact_btn"
+                    class="hoc contact_btn contact_btn_primary contact_btn_lg">Send
+                    Message</button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+          <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.backtotop.js"></script>
+    <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
+</body>
+</html>
