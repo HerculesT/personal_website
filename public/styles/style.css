@@ -48,22 +48,18 @@
 
 
 /* About Me */
-.container .content{}
 
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
 .sectiontitle .heading{margin:0; padding:0; line-height:1;}
 
 #front_aboutMe .sectiontitle{display:block; max-width:55%; margin:0 auto; text-align:center;}
 
-#front_aboutMe{}
+
 #front_aboutMe ul{text-align:center;}
-#front_aboutMe ul li{}
-#front_aboutMe ul li article{}
 #front_aboutMe ul li article i{margin-bottom:30px; font-size:42px}
-#front_aboutMe ul li article .heading{}
-#front_aboutMe ul li article p{}
 #front_aboutMe ul li article footer{margin-top:30px;}
 #front_aboutMe .mWidth{ width: 75%;}
+
 
 
 /* Skillset */
@@ -247,6 +243,32 @@
 	background: url(../images/background4.jpg);
 	background-size: cover;
 }
+
+
+/* Certificates */
+#certificates{
+	/* height: 100vh; */
+	background:rgb(85, 85, 85);
+	background: url(../images/background4.jpg);
+	/* background-size: 100% 150%; */
+	background-size: cover;
+}
+
+  th,
+  td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+  }
+  th {
+	text-align: left;
+  }
+  thead th {
+	background-color: rgb(192, 51, 0);
+  }
+  tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+  }
 
 
 

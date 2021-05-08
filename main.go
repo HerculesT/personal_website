@@ -14,9 +14,9 @@ func init() {
 
 func main() {
 	http.HandleFunc("/", frontPage)
-	http.HandleFunc("/aboutMe", aboutMe)
 	http.HandleFunc("/skillSet", skillSet)
 	http.HandleFunc("/workExperience", workExperience)
+	http.HandleFunc("/certificates", certificates)
 	http.HandleFunc("/contactMe", contactMe)
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("public")))) //initialize and load css.
 	http.Handle("/favicon.ico", http.NotFoundHandler())                                       //keep browser from complaining about favicon missing
@@ -25,15 +25,6 @@ func main() {
 
 func frontPage(w http.ResponseWriter, req *http.Request) {
 	err := tpl.ExecuteTemplate(w, "frontPage.gohtml", req)
-	if err != nil {
-		http.Error(w, err.Error(), 500)
-		log.Fatalln(err)
-	}
-}
-
-
-func aboutMe(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "aboutMe.gohtml", req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
@@ -50,6 +41,14 @@ func skillSet(w http.ResponseWriter, req *http.Request) {
 
 func workExperience(w http.ResponseWriter, req *http.Request) {
 	err := tpl.ExecuteTemplate(w, "workExperience.gohtml", req)
+	if err != nil {
+		http.Error(w, err.Error(), 500)
+		log.Fatalln(err)
+	}
+}
+
+func certificates(w http.ResponseWriter, req *http.Request) {
+	err := tpl.ExecuteTemplate(w, "certificates.gohtml", req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
