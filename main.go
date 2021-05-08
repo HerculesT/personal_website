@@ -5,8 +5,6 @@ import (
 	"net/http"
 	"os"
 	"text/template"
-
-	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 var tpl *template.Template
@@ -22,9 +20,6 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	router := gin.New()
-	router.Use(gin.Logger())
-
 	http.HandleFunc("/", frontPage)
 	http.HandleFunc("/skillSet", skillSet)
 	http.HandleFunc("/workExperience", workExperience)
@@ -34,7 +29,7 @@ func main() {
 	http.Handle("/favicon.ico", http.NotFoundHandler())                                       //keep browser from complaining about favicon missing
 	// http.ListenAndServe(":8080", nil)
 
-	router.Run(":" + port)
+	http.ListenAndServe(":"+port, nil)
 
 }
 
