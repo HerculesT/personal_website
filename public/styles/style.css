@@ -388,18 +388,27 @@
 		width: 100%;
 	}
 	
-	
+
 	.fa {
 		padding: 20px;
-		font-size: 30px;
-		width: 50px;
+		font-size: 20px!important;
+		/* width: 50px; */
 		text-align: center;
 		text-decoration: none;
 		margin: 5px 2px;
 	  }
+	  #backtotop .fa {
+		padding: 0px!important;
+		margin: 0px 0px!important;
+	  }
 	
 	  .fa-linkedin {
 		background: #007bb5;
+		color: white;
+	  }
+
+	  .fa-github {
+		background: #ff5100;
 		color: white;
 	  }
 	  
