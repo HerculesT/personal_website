@@ -14,6 +14,7 @@ func init() {
 }
 
 func main() {
+
 	port := os.Getenv("PORT")
 
 	if port == "" {
@@ -25,7 +26,7 @@ func main() {
 	http.HandleFunc("/workExperience", workExperience)
 	http.HandleFunc("/certificates", certificates)
 	http.HandleFunc("/contactMe", contactMe)
-	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("public")))) //initialize and load css.
+	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("assets")))) //initialize and load css.
 	http.Handle("/favicon.ico", http.NotFoundHandler())                                       //keep browser from complaining about favicon missing
 	// http.ListenAndServe(":8080", nil)
 
