@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,28 +23,36 @@
         </div>
         {{template "navBar"}}
       </header>
-      
+
  <div class="container">
-        <form id="contactForm" class="" method="post">
+
+        <form action="/contactMe" id="contactForm" method="post">
 
             <div class="contact_form_group">
                 <label for="Name" class="contact_lb">Your name</label>
                 <div class="">
-                    <input type="text" id="Name" name="Name" class="contact_form_control" required>
+                    <input type="text" id="Name" name="name" class="contact_form_control" required>
                 </div>
             </div>
 
             <div class="contact_form_group">
                 <label for="Email" class="contact_lb">Your email address</label>
                 <div class="">
-                    <input type="email" id="Email" name="Email" class="contact_form_control" required>
+                    <input type="email" id="Email" name="email" class="contact_form_control" required>
+                </div>
+            </div>
+
+            <div class="contact_form_group">
+                <label for="Subject" class="contact_lb">Subject</label>
+                <div class="">
+                    <input type="text" id="Subject" name="subject" class="contact_form_control" required>
                 </div>
             </div>
 
             <div class="contact_form_group">
                 <label for="Message" class="contact_lb">Your message</label>
                 <div class="">
-                    <textarea id="Message" name="Message" class="contact_form_control" rows="6"
+                    <textarea id="Message" name="message" class="contact_form_control" rows="6"
                         maxlength="3000" required></textarea>
                 </div>
             </div>
@@ -55,8 +64,10 @@
             </div>
 
         </form>
+        
     </div>
     </div>
+
     {{template "backToTop"}}
     <!-- JAVASCRIPTS -->
     <script src="scripts/jquery.min.js"></script>
