@@ -99,9 +99,15 @@ func viperEnvVariable(key string) string {
 }
 
 func contactMe(w http.ResponseWriter, req *http.Request) {
-	var success bool
-	if req.Method == http.MethodPost {
-
+	if req.Method == http.MethodGet {
+		err := tpl.ExecuteTemplate(w, "contactMe.gohtml", nil) //execute the template with bool false shows  the form.
+		if err != nil {
+			http.Error(w, err.Error(), 500)
+			log.Fatalln(err)
+		}
+	} else {
+		req.ParseForm()
+		tpl.ExecuteTemplate(w, "contactMe.gohtml", struct{ Success bool }{true}) //execute the template with bool true shows thank you msg.
 		user := viperEnvVariable("GMAIL_USER")
 		pass := viperEnvVariable("GMAIL_PASS")
 		d := mail.NewDialer("smtp.gmail.com", 587, user, pass)
@@ -120,14 +126,6 @@ func contactMe(w http.ResponseWriter, req *http.Request) {
 			fmt.Println("Failed sending mail")
 			panic(err)
 		}
-		success = true
 		fmt.Println("Mail sent without error")
-
 	}
-	if !success {
-		tpl.ExecuteTemplate(w, "contactMe.gohtml", req)
-	} else {
-		tpl.ExecuteTemplate(w, "success.gohtml", req)
-	}
-
 }
