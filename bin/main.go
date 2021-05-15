@@ -110,7 +110,7 @@ func contactMe(w http.ResponseWriter, req *http.Request) {
 		tpl.ExecuteTemplate(w, "contactMe.gohtml", struct{ Success bool }{true}) //execute the template with bool true shows thank you msg.
 		user := viperEnvVariable("GMAIL_USER")
 		pass := viperEnvVariable("GMAIL_PASS")
-		d := mail.NewDialer("smtp.gmail.com", 587, user, pass)
+		d := mail.NewDialer("smtp-relay.sendinblue.com", 587, user, pass)
 		m := mail.NewMessage()
 
 		nm := req.FormValue("name")
