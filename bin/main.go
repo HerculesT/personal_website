@@ -111,8 +111,8 @@ func contactMe(w http.ResponseWriter, req *http.Request) {
 	} else {
 		req.ParseForm()
 		tpl.ExecuteTemplate(w, "contactMe.gohtml", struct{ Success bool }{true}) //execute the template with bool true shows thank you msg.
-		// user := viperEnvVariable("GMAIL_USER")
-		// pass := viperEnvVariable("GMAIL_PASS")
+		// user := viperEnvVariable("GMAIL_USER") //when running on localhost
+		// pass := viperEnvVariable("GMAIL_PASS") //when running on localhost
 		user := SMail
 		pass := SPass
 		d := mail.NewDialer("smtp-relay.sendinblue.com", 587, user, pass)

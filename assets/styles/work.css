@@ -1,6 +1,8 @@
 /* Variables */
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
+
+
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -19,6 +21,8 @@ body {
   margin: 4em auto;
   position: relative;
   max-width: 46em;
+  background: #ffffff6e;
+  padding-top: 30px;
 }
 .timeline:before {
   background-color: black;
@@ -36,10 +40,10 @@ body {
 }
 .timeline-event:hover .timeline-event-icon {
   transform: rotate(-45deg);
-  background-color: #a83279;
+  background-color: #ff3300;
 }
 .timeline-event:hover .timeline-event-thumbnail {
-  box-shadow: inset 40em 0 0 0 #a83279;
+  box-shadow: inset 40em 0 0 0 #ff3300;
 }
 
 .timeline-event-copy {
