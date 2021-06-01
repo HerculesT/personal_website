@@ -7,7 +7,6 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/spf13/viper"
 	"gopkg.in/mail.v2"
 )
 
@@ -70,36 +69,39 @@ func certificates(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func viperEnvVariable(key string) string {
+// func viperEnvVariable(key string) string {
 
-	// SetConfigFile explicitly defines the path, name and extension of the config file.
-	// Viper will use this and not check any of the config paths.
-	// .env - It will search for the .env file in the current directory
-	viper.SetConfigFile("../config.env")
+// 	// SetConfigFile explicitly defines the path, name and extension of the config file.
+// 	// Viper will use this and not check any of the config paths.
+// 	// .env - It will search for the .env file in the current directory
+// 	viper.SetConfigFile("../config.env")
 
-	// Find and read the config file
-	err := viper.ReadInConfig()
+// 	// Find and read the config file
+// 	err := viper.ReadInConfig()
 
-	if err != nil {
-		log.Fatalf("Error while reading config file %s", err)
-	}
+// 	if err != nil {
+// 		log.Fatalf("Error while reading config file %s", err)
+// 	}
 
-	// viper.Get() returns an empty interface{}
-	// to get the underlying type of the key,
-	// we have to do the type assertion, we know the underlying value is string
-	// if we type assert to other type it will throw an error
-	value, ok := viper.Get(key).(string)
+// 	// viper.Get() returns an empty interface{}
+// 	// to get the underlying type of the key,
+// 	// we have to do the type assertion, we know the underlying value is string
+// 	// if we type assert to other type it will throw an error
+// 	value, ok := viper.Get(key).(string)
 
-	// If the type is a string then ok will be true
-	// ok will make sure the program not break
-	if !ok {
-		log.Fatalf("Invalid type assertion")
-	}
+// 	// If the type is a string then ok will be true
+// 	// ok will make sure the program not break
+// 	if !ok {
+// 		log.Fatalf("Invalid type assertion")
+// 	}
 
-	return value
-}
+// 	return value
+// }
 
 func contactMe(w http.ResponseWriter, req *http.Request) {
+
+	SMail := os.Getenv("GMAIL_USER")
+	SPass := os.Getenv("GMAIL_PASS")
 	if req.Method == http.MethodGet {
 		err := tpl.ExecuteTemplate(w, "contactMe.gohtml", nil) //execute the template with bool false shows  the form.
 		if err != nil {
@@ -109,8 +111,10 @@ func contactMe(w http.ResponseWriter, req *http.Request) {
 	} else {
 		req.ParseForm()
 		tpl.ExecuteTemplate(w, "contactMe.gohtml", struct{ Success bool }{true}) //execute the template with bool true shows thank you msg.
-		user := viperEnvVariable("GMAIL_USER")
-		pass := viperEnvVariable("GMAIL_PASS")
+		// user := viperEnvVariable("GMAIL_USER")
+		// pass := viperEnvVariable("GMAIL_PASS")
+		user := SMail
+		pass := SPass
 		d := mail.NewDialer("smtp-relay.sendinblue.com", 587, user, pass)
 		m := mail.NewMessage()
 
