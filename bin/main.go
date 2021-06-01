@@ -14,7 +14,7 @@ import (
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseGlob("templates/*.gohtml"))
+	tpl = template.Must(template.ParseGlob("templates/*.gohtml")) //*****Heroku hosting requires parseglob to be "templates/*.gohtml", localhost requires "../templates/*.gohtml"
 }
 
 func main() {
@@ -30,8 +30,8 @@ func main() {
 	http.HandleFunc("/workExperience", workExperience)
 	http.HandleFunc("/certificates", certificates)
 	http.HandleFunc("/contactMe", contactMe)
-	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("../assets")))) //initialize and load css.
-	http.Handle("/favicon.ico", http.NotFoundHandler())                                          //keep browser from complaining about favicon missing
+	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("assets")))) //initialize and load css. *****Heroku requires dir to be "assets" local hosting requires "../assets"*****
+	http.Handle("/favicon.ico", http.NotFoundHandler())                                       //keep browser from complaining about favicon missing
 	// http.ListenAndServe(":8080", nil)
 
 	http.ListenAndServe(":"+port, nil)
