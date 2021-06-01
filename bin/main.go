@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/spf13/viper"
@@ -18,11 +19,11 @@ func init() {
 
 func main() {
 
-	// port := os.Getenv("PORT")
+	port := os.Getenv("PORT")
 
-	// if port == "" {
-	// 	log.Fatal("$PORT must be set")
-	// }
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 
 	http.HandleFunc("/", frontPage)
 	http.HandleFunc("/skillSet", skillSet)
@@ -31,9 +32,9 @@ func main() {
 	http.HandleFunc("/contactMe", contactMe)
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("../assets")))) //initialize and load css.
 	http.Handle("/favicon.ico", http.NotFoundHandler())                                          //keep browser from complaining about favicon missing
-	http.ListenAndServe(":8080", nil)
+	// http.ListenAndServe(":8080", nil)
 
-	// http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":"+port, nil)
 
 }
 
