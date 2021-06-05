@@ -681,10 +681,6 @@ input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
 	#pageintro article, #pageintro p{max-width:none; margin:auto;}
 	#pageintro .heading{font-size:2rem;}
 
-	.sectiontitle{max-width:none; margin-bottom:50px;}
-
-	.sectiontitle, #aboutMe ul, #references .ref-sort{text-align:left;}
-
 	#references .ref-img{margin-bottom:20px;}
 	#references .ref-img li:nth-last-child(-n+3){margin-bottom:30px;}
 	#references .ref-img + footer{text-align:left;}
