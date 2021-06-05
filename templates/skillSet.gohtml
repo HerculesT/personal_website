@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillSet</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Social Icons  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+{{template "header" .}} <!--The dot is to parse the page title-->
 
 <body>
     <!--################################# Top Background #################################-->
@@ -21,7 +10,7 @@
                 <div id="logo" class="flex_left zoom">
                     <h1><a href="/">Hercules Tchkoidze</a></h1>
                 </div>
-                {{template "navBar"}}
+                {{template "navBar" .}} <!--The dot is to parse the page title-->
             </header>
 
             <div class="s_card">
@@ -106,11 +95,12 @@
             </div>
         </div>
     </div>
-        {{template "footer"}}
+    {{template "footer"}}
     <!--################################# / small tables #################################-->
     {{template "backToTop"}}
     <!-- JAVASCRIPTS -->
     <script src="/assets/scripts/jquery.min.js"></script>
     <script src="/assets/scripts/jquery.backtotop.js"></script>
 </body>
+
 </html>

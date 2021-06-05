@@ -37,8 +37,15 @@ func main() {
 
 }
 
+//data for the header title
+type Data struct {
+	Title   string
+	Success bool
+}
+
 func frontPage(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "frontPage.gohtml", req)
+	page := &Data{Title: "Hercules Tchkoidze"}
+	err := tpl.ExecuteTemplate(w, "frontPage.gohtml", page)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
@@ -46,7 +53,8 @@ func frontPage(w http.ResponseWriter, req *http.Request) {
 }
 
 func skillSet(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "skillSet.gohtml", req)
+	page := &Data{Title: "SkillSet"}
+	err := tpl.ExecuteTemplate(w, "skillSet.gohtml", page)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
@@ -54,7 +62,8 @@ func skillSet(w http.ResponseWriter, req *http.Request) {
 }
 
 func workExperience(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "workExperience.gohtml", req)
+	page := &Data{Title: "WorkExperience"}
+	err := tpl.ExecuteTemplate(w, "workExperience.gohtml", page)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
@@ -62,7 +71,8 @@ func workExperience(w http.ResponseWriter, req *http.Request) {
 }
 
 func certificates(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "certificates.gohtml", req)
+	page := &Data{Title: "Certificates"}
+	err := tpl.ExecuteTemplate(w, "certificates.gohtml", page)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 		log.Fatalln(err)
@@ -99,11 +109,11 @@ func certificates(w http.ResponseWriter, req *http.Request) {
 // }
 
 func contactMe(w http.ResponseWriter, req *http.Request) {
-
+	page := &Data{Title: "ContactMe", Success: false}
 	SMail := os.Getenv("GMAIL_USER")
 	SPass := os.Getenv("GMAIL_PASS")
 	if req.Method == http.MethodGet {
-		err := tpl.ExecuteTemplate(w, "contactMe.gohtml", nil) //execute the template with bool false shows  the form.
+		err := tpl.ExecuteTemplate(w, "contactMe.gohtml", page) //execute the template with bool false shows  the form.
 		if err != nil {
 			http.Error(w, err.Error(), 500)
 			log.Fatalln(err)
@@ -111,8 +121,8 @@ func contactMe(w http.ResponseWriter, req *http.Request) {
 	} else {
 		req.ParseForm()
 		tpl.ExecuteTemplate(w, "contactMe.gohtml", struct{ Success bool }{true}) //execute the template with bool true shows thank you msg.
-		// user := viperEnvVariable("GMAIL_USER") //when running on localhost
-		// pass := viperEnvVariable("GMAIL_PASS") //when running on localhost
+		// user := viperEnvVariable("GMAIL_USER")                                   //when running on localhost
+		// pass := viperEnvVariable("GMAIL_PASS")                                   //when running on localhost
 		user := SMail
 		pass := SPass
 		d := mail.NewDialer("smtp-relay.sendinblue.com", 587, user, pass)

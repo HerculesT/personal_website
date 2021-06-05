@@ -582,7 +582,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
 #footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
 
 .zoom {
-	transition: transform .6s; /* Animation */
+	transition: transform .1s; /* Animation */
   }
   .zoom:hover {
 	transform: scale(1.2);

@@ -1,5 +1,5 @@
 {{if .Success}}
     {{template "contactForm_success"}}
 {{else}}
-    {{template "contactForm"}}
+    {{template "contactForm" .}} <!--The dot is to parse the page title-->
 {{end}}
